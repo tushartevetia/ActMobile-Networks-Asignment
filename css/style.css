@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Roboto' ,sans-serif;
+    
+}
+#colorInput{
+    background-color: #ffe135;
+    border: none;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    position: sticky;
+    top:90%;
+    left: 100%;
+    z-index: 1;
+    font-weight: bold;
+}
+#greeting{
+    background-color: #ffe135;
+    width: 380px;
+    margin: auto;
+    height: 40px;
+    padding-top: 18px;
+    color: black;
+    text-align: center;
+    display: none;
+    border-radius: 20px;
+    
+}
+.fas.fa-times{
+   position: relative;
+   left:177px;
+   top:-53px;
+   cursor: pointer;
+   color: black;
+}
+
+header{
+    text-align: center;
+    background-color:rgb(44, 40, 40) ;
+    padding: 10px;
+    
+}
+
+.header-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.header-links a{
+    color: black;
+    background-color: #ffe135;
+    width: 68px;
+    text-decoration: none;
+    border-radius:5px ;
+}
+.header-links a:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out 0.5s;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.about-items{
+    background-color: rgba(44, 41, 41, 0.815);
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.about-items i{
+    color: #ffe135
+}
+
+.feature-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.feature-items{
+    flex: 45%;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+.feature-items:hover{
+    background-color: rgb(53, 50, 50);
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+.feature-items i{
+
+    background-color: red;
+    border-radius: 50%;
+}
+
+.feature-subheading{
+    font-weight: bold;
+    color: #ffe135;
+}
+
+.gallery-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 10px 10px 10px;
+    background: #fff;
+    /* width: 720px; */
+    /* max-width: 720px;
+    max-height: 400px; */
+    height:300px ;
+    width: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+}
+#slider{
+    overflow: hidden;
+}
+#slider figure img{
+    width: 20%;
+    /* height: 400px; */
+    /* background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center; */
+    height: 300px;
+    width: 10%;
+    float: left;
+}
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 25s sliding ease infinite;
+}
+
+
+.review-container{
+    display: flex;
+    flex-direction: column;
+}
+.review-items{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(32, 30, 30);
+    border-radius: 10px;
+
+}
+.review-items:hover{
+    transform: scale(1.02);
+    transition: all ease-in-out 0.5s;
+}
+
+.review-items img{
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color:rgb(32, 30, 30);
+    padding: 10px;
+    padding-top: 15px;
+}
+.contact-items{
+    background-color: rgb(53, 50, 50);
+    padding: 15px;
+    width: 100%;   
+    margin: 5px;
+}
+
+.contact-items:hover{
+    transform: scale(1.05);
+    transition: all ease-in-out 0.5s;
+}
+.contact-items i{
+    background-color: #ffe135;
+    width: 69px;
+    height: 55px;
+    color: black;
+    padding: 8px;
+    border-radius: 50%;
+}
+@keyframes sliding{
+    0%{
+        left:0%;
+    }
+    50%{
+        left:-100%
+    }
+}
+footer{
+    background-color: rgb(32, 30, 30);
+    height: 50px;
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+}
+
+
+@media(max-width:600px){
+    .about-container{
+        flex-direction: column;
+    }
+    .contact-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-items{
+        width: 90%;
+        margin: 5px;
+    }
+    #slider figure img{
+        width: 20%;
+    }
+    @keyframes sliding{
+        0%{
+            left:0%;
+        }
+        25%{
+            left:-100%
+        }
+        50%{
+            left: -200%;
+        }
+        75%{
+            left:-300%
+        }
+    }
+}
